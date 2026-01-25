@@ -3,22 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    
+    <!-- Primary Meta Tags -->
+    <title>Thissa Village Restaurant & Bar | Authentic Sri Lankan Cuisine in Tissamaharama</title>
+    <meta name="title" content="Thissa Village Restaurant & Bar | Authentic Sri Lankan Cuisine" />
+    <meta name="description" content="Experience authentic Sri Lankan cuisine at Thissa Village Restaurant & Bar in Tissamaharama. Traditional recipes, tropical ambiance, and premium hospitality for travelers near Yala National Park." />
+    <meta name="keywords" content="Sri Lankan restaurant, Tissamaharama dining, Yala National Park food, authentic curry, tropical bar, Sri Lanka tourism" />
+    <meta name="author" content="Thissa Village Restaurant & Bar" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:url" content="https://thissavillage.com/" />
+    <meta property="og:title" content="Thissa Village Restaurant & Bar | Authentic Sri Lankan Cuisine" />
+    <meta property="og:description" content="Experience authentic Sri Lankan cuisine at Thissa Village Restaurant & Bar in Tissamaharama. Traditional recipes, tropical ambiance, and premium hospitality." />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Thissa Village Restaurant & Bar" />
+    
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:url" content="https://thissavillage.com/" />
+    <meta name="twitter:title" content="Thissa Village Restaurant & Bar | Authentic Sri Lankan Cuisine" />
+    <meta name="twitter:description" content="Experience authentic Sri Lankan cuisine at Thissa Village Restaurant & Bar in Tissamaharama. Traditional recipes, tropical ambiance, and premium hospitality." />
+    <meta name="twitter:image" content="/og-image.jpg" />
+    
+    <!-- Restaurant Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Thissa Village Restaurant & Bar",
+      "image": "/og-image.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Street",
+        "addressLocality": "Tissamaharama",
+        "addressRegion": "Southern Province",
+        "addressCountry": "LK"
+      },
+      "telephone": "+94771234567",
+      "servesCuisine": "Sri Lankan",
+      "priceRange": "$$",
+      "openingHours": "Mo-Su 11:00-23:00",
+      "url": "https://thissavillage.com"
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href="https://thissavillage.com/" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0f0d0a" />
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

@@ -8,12 +8,10 @@ const CustomCursor = () => {
 
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
-  const rotation = useMotionValue(0);
 
-  const springConfig = { damping: 25, stiffness: 400 };
+  const springConfig = { damping: 25, stiffness: 450 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
-  const rotationSpring = useSpring(rotation, { damping: 30, stiffness: 200 });
 
   useEffect(() => {
     // Check if mobile device
@@ -26,8 +24,6 @@ const CustomCursor = () => {
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
-      // Subtle rotation based on movement
-      rotation.set(rotation.get() + (e.movementX * 0.5));
       setIsVisible(true);
     };
 
@@ -58,62 +54,57 @@ const CustomCursor = () => {
       document.body.removeEventListener('mouseleave', handleMouseLeave);
       window.removeEventListener('resize', checkMobile);
     };
-  }, [cursorX, cursorY, rotation]);
+  }, [cursorX, cursorY]);
 
   // Don't render on mobile
   if (isMobile) return null;
 
   return (
     <>
-      {/* Main cursor - Wine bottle top design */}
+      {/* Apple-style Black Pointer (Medium Size) */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 pointer-events-none z-[9999]"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
-          translateX: '-50%',
-          translateY: '-50%',
+          translateX: -2,
+          translateY: -2,
         }}
         animate={{
           opacity: isVisible ? 1 : 0,
         }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.1 }}
       >
-        {/* Outer ring - Wine bottle cap edge */}
         <motion.div
-          className="relative flex items-center justify-center"
-          style={{ rotate: rotationSpring }}
           animate={{
-            scale: isHovering ? 1.5 : 1,
+            scale: isHovering ? 1.2 : 1,
           }}
-          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 25 }}
         >
-          {/* Cork top pattern - Circular with texture */}
-          <div className="w-8 h-8 rounded-full bg-secondary/90 border-2 border-secondary flex items-center justify-center">
-            {/* Inner cork texture - concentric circles */}
-            <div className="w-5 h-5 rounded-full border border-secondary-foreground/30 flex items-center justify-center">
-              <div className="w-2.5 h-2.5 rounded-full border border-secondary-foreground/20 flex items-center justify-center">
-                <div className="w-1 h-1 rounded-full bg-secondary-foreground/40" />
-              </div>
-            </div>
-          </div>
-          
-          {/* Bottle cap ridges - decorative notches around edge */}
-          {[...Array(12)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-0.5 h-1.5 bg-secondary-foreground/30"
-              style={{
-                transformOrigin: 'center 16px',
-                rotate: `${i * 30}deg`,
-                top: '-2px',
-              }}
+          {/* High-quality SVG recreation of the macOS cursor */}
+          <svg 
+            width="28" 
+            height="36" 
+            viewBox="0 0 17 22" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ 
+              filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))',
+              transform: 'rotate(-5deg)' 
+            }}
+          >
+            <path 
+              d="M0.5 0.5V20.5L5.5 15.5L8.5 21.5L11.5 20.5L8.5 14.5L15.5 14L0.5 0.5Z" 
+              fill="black" 
+              stroke="white" 
+              strokeWidth="1.2"
+              strokeLinejoin="round"
             />
-          ))}
+          </svg>
         </motion.div>
       </motion.div>
 
-      {/* Trailing dot for smooth feel */}
+      {/* Subtle hover effect ring for interactive elements */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9998]"
         style={{
@@ -123,17 +114,20 @@ const CustomCursor = () => {
           translateY: '-50%',
         }}
         animate={{
-          opacity: isVisible ? 0.5 : 0,
-          scale: isHovering ? 2 : 1,
+          scale: isHovering ? 1.8 : 0,
+          opacity: isHovering ? 0.2 : 0,
         }}
         transition={{ duration: 0.3 }}
       >
-        <div className="w-1 h-1 rounded-full bg-secondary" />
+        <div className="w-10 h-10 rounded-full bg-black" />
       </motion.div>
 
       {/* Hide default cursor globally */}
       <style>{`
         * {
+          cursor: none !important;
+        }
+        a, button, input, textarea, [role="button"], .cursor-pointer {
           cursor: none !important;
         }
       `}</style>

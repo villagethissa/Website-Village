@@ -5,7 +5,9 @@ import { Menu, X } from 'lucide-react';
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
+  { name: 'Rooms', href: '#rooms' },
   { name: 'Menu', href: '#menu' },
+  { name: 'Reviews', href: '#reviews' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -34,10 +36,19 @@ const Navbar = () => {
     >
       <nav className="container mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
-          <span className="font-display text-2xl md:text-3xl font-semibold text-foreground">
-            Thissa <span className="text-secondary">Village</span>
-          </span>
+        <a href="#home" className="flex flex-col items-center group">
+          <div className="flex flex-col items-center">
+            <span className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-[0.15em] uppercase leading-none">
+              Tissa <span className="text-secondary">Village</span>
+            </span>
+            <div className="flex items-center w-full mt-1.5 overflow-hidden">
+              <div className="h-[1px] flex-grow bg-gradient-to-r from-transparent via-secondary/50 to-secondary/30" />
+              <span className="px-3 text-[8px] md:text-[10px] font-display font-medium tracking-[0.4em] uppercase text-secondary whitespace-nowrap">
+                Restaurant & Bar
+              </span>
+              <div className="h-[1px] flex-grow bg-gradient-to-l from-transparent via-secondary/50 to-secondary/30" />
+            </div>
+          </div>
         </a>
 
         {/* Desktop Navigation */}

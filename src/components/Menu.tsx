@@ -116,15 +116,15 @@ const Menu = () => {
               className="mb-12"
             >
               <span className="text-secondary uppercase tracking-[0.4em] text-xs font-body mb-4 block">
-                Culinary Delights
+                Best Seafood & Curry in Tissamaharama
               </span>
               <h2 className="heading-section text-foreground mb-6">
                 Our <span className="text-gradient-gold">Menu</span>
               </h2>
               <div className="divider-gold mb-6 mx-0" style={{ marginLeft: 0 }} />
               <p className="text-body max-w-xl">
-                Discover the authentic flavors of Sri Lanka, from traditional village recipes 
-                to refreshing tropical cocktails.
+                The top-rated Sri Lankan seafood restaurant in Tissamaharama. We offer fresh 
+                seafood, authentic rice and curry, and the best BBQ experience near Yala National Park.
               </p>
             </motion.div>
 

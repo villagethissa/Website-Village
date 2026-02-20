@@ -47,7 +47,7 @@ const About = () => {
             Our Story
           </span>
           <h2 className="heading-section text-foreground mb-6">
-            About <span className="text-gradient-gold">Thissa Village</span>
+            About <span className="text-gradient-gold">Tissa Village</span>
           </h2>
           <div className="divider-gold" />
         </motion.div>
@@ -62,18 +62,20 @@ const About = () => {
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             <h3 className="font-display text-3xl md:text-4xl text-foreground mb-8 leading-tight">
-              A Taste of Sri Lankan Heritage
+              Best Restaurant in Tissamaharama for Authentic Heritage
             </h3>
             <p className="text-body mb-6">
-              Nestled in the heart of Tissamaharama, Thissa Village Restaurant & Bar brings you 
+              Nestled in the heart of Tissamaharama, Tissa Village Restaurant & Bar is the top-rated 
+              destination for travelers searching for the best restaurant in Tissamaharama. We offer 
               an authentic culinary experience that celebrates the rich tapestry of Sri Lankan 
-              cuisine. Our kitchen blends time-honored family recipes with contemporary 
-              presentation, creating dishes that honor tradition while delighting modern palates.
+              cuisine, making us the perfect choice for a romantic dinner in Yala or a family outing.
             </p>
             <p className="text-body mb-10">
-              Whether you're a traveler seeking authentic local flavors or a connoisseur of 
-              fine dining, our warm hospitality and carefully crafted menu promise an 
-              unforgettable journey through the island's diverse culinary landscape.
+              Whether you're visiting from Hambantota, Weerawila, or looking for a restaurant near 
+              Yala National Park after a safari, our kitchen blends time-honored family recipes 
+              with contemporary presentation. We specialize in fresh seafood in Tissamaharama and 
+              traditional rice and curry, ensuring every foreign tourist finds a taste of home 
+              and the island.
             </p>
             
             {/* Stats with staggered animation */}

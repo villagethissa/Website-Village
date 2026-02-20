@@ -50,13 +50,12 @@ const Footer = () => {
               className="inline-block mb-4"
               whileHover={{ scale: 1.02 }}
             >
-              <h3 className="font-display text-2xl text-foreground">
-                Thissa <span className="text-secondary">Village</span>
+              <h3 className="font-display text-2xl text-foreground uppercase tracking-widest">
+                Tissa <span className="text-secondary">Village</span>
               </h3>
             </motion.a>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Authentic Sri Lankan cuisine in the heart of Tissamaharama. 
-              Experience the true taste of tradition.
+              Best restaurant in Tissamaharama near Yala National Park. Experience luxury dining, fresh seafood, and a premium bar in Tissa Village, the top choice for tourists in Hambantota and Weerawila.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (

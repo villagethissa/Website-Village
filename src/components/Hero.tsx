@@ -85,23 +85,29 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="heading-display text-foreground mb-8 leading-[1.1]"
+          className="heading-display text-foreground mb-4 leading-[1.1]"
         >
-          Experience Authentic
+          Best <span className="text-gradient-gold">Restaurant in Tissamaharama</span>
           <br />
-          <span className="text-gradient-gold">Sri Lankan Taste</span>
-          <br />
-          in Thissa
+          Near Yala National Park
         </motion.h1>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="font-display text-xl md:text-3xl text-foreground/80 mb-8 italic"
+        >
+          Luxury Dining & Premium Bar Experience in Tissa
+        </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-body max-w-2xl mx-auto mb-12 text-lg"
+          className="text-body max-w-2xl mx-auto mb-12 text-lg text-muted-foreground"
         >
-          Immerse yourself in a culinary journey through Sri Lanka's rich flavors, 
-          where traditional recipes meet contemporary elegance in the heart of Tissamaharama.
+          Discover Tissa Village Restaurant, the top-rated dining destination for tourists in Tissamaharama, Hambantota and Weerawila. The perfect stop for fresh seafood and fine dining after your Yala safari.
         </motion.p>
 
         <motion.div
